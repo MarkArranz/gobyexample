@@ -14,12 +14,12 @@ func f(from string) {
 
 func main() {
 
-	// Supposed we have a function call `f(s)`. Here's how we'd call that in the usual way,
-	// running it synchronously.
+	// Supposed we have a function call `f(s)`. Here's how we'd call that in the usual
+	// way, running it synchronously.
 	f("direct")
 
-	// To invoke this function in a goroutine, us `go f(s)`. This new goroutine will execute concurrently
-	// with the calling one.
+	// To invoke this function in a goroutine, us `go f(s)`. This new goroutine will
+	// execute concurrently with the calling one.
 	go f("goroutine")
 
 	// You can also start a goroutine from an anonymous function call.
@@ -27,23 +27,25 @@ func main() {
 		fmt.Println(msg)
 	}("going")
 
-	// Our two function calls are running asynchronously in separate goroutines now. Wait for them to
-	// finish (for a more robust approach, use a [WaitGroup](https://gobyexample.com/waitgroups))
+	// Our two function calls are running asynchronously in separate goroutines now.
+	// Wait for them to finish (for a more robust approach, use a [WaitGroup]
+	// (https://gobyexample.com/waitgroups)).
 	time.Sleep(time.Second)
 	fmt.Println("done")
 }
 
-// When we runt this program, we see the output of the blocking call first, then the interleaved output
-// of the two goroutines. This interleaving reflects the goroutines being run concurrently by the Go runtime.
+// When we run this program, we see the output of the blocking call first, then the
+// interleaved output of the two goroutines. This interleaving reflects the
+// goroutines being run concurrently by the Go runtime.
 
-// $> go run goroutines.go
-// $> direct : 0
-// $> direct : 1
-// $> direct : 2
-// $> goroutine : 0
-// $> going
-// $> goroutine : 1
-// $> goroutine : 2
-// $> done
+// $ go run goroutines.go
+// direct : 0
+// direct : 1
+// direct : 2
+// goroutine : 0
+// going
+// goroutine : 1
+// goroutine : 2
+// done
 
 // Next we'll look at a complement to goroutines in concurrent Go programs: channels.
