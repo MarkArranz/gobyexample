@@ -30,4 +30,9 @@ func main() {
 
 // Note that you don't need parentheses around conditions in Go, but that brances are required.
 
+// $ go run if-else.go
+// 7 is odd
+// 8 is divisible by 4
+// 9 has 1 digit
+
 // There is no ternary in Go, so you'll need to use a full `if` statement even for basic conditions.

@@ -26,3 +26,9 @@ func main() {
 	// assignment or function call. For example, here `math.Sin` expects a `float64`.
 	fmt.Println(math.Sin(n))
 }
+
+// $ go run constant.go
+// constant
+// 6e+11
+// 600000000000
+// -0.28470407323754404

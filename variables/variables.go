@@ -28,3 +28,10 @@ func main() {
 	f := "apple"
 	fmt.Println(f)
 }
+
+// $ go run variables.go
+// intial
+// 1 2
+// true
+// 0
+// apple

@@ -18,3 +18,11 @@ func main() {
 	fmt.Println(true || false)
 	fmt.Println(!true)
 }
+
+// $ go run values.go
+// golang
+// 1+1 = 2
+// 7.0/3.0 = 2.333333335
+// false
+// true
+// false
