@@ -76,6 +76,11 @@ func main() {
 // mutex-synchronized `state`.
 
 // $ go run mutexes.go
+/*
+readOps: 64718
+writeOps: 6470
+state: map[0:99 1:61 2:86 3:28 4:74]
+*/
 
 // Next we'll look at implementing this same state management task using only goroutines
 // and channels.
